@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bookings</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <h2>🎟 Ticket Booking</h2>
+    <div>
+        <a href="/">Home</a>
+        <a href="/movies">Movies</a>
+        <a href="/bookings">Bookings</a>
+    </div>
+</div>
+
+<div class="container">
+    <h2>Book Your Ticket</h2>
+    <p>Enter customer name, movie ID and seats to book ticket.</p>
+
+    <div class="form-box">
+        <input type="text" id="customer_name" placeholder="Customer Name">
+        <select id="movieDropdown"></select>
+        <input type="number" id="seats" placeholder="Seats">
+        <button onclick="bookTicket()">🎟 Book Ticket</button>
+    </div>
+
+    <h3>All Bookings</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Booking ID</th>
+                <th>Customer</th>
+                <th>Movie</th>
+                <th>Seats</th>
+                <th>Total Amount</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="bookingTable"></tbody>
+    </table>
+</div>
+
+<script src="/static/script.js"></script>
+<script>
+    loadMovieDropdown();
+    loadBookings();
+</script>
+
+</body>
+</html>
